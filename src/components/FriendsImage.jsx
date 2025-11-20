@@ -1,6 +1,13 @@
-const FriendsImage = ({name}) => {
+const FriendsImage = ({name,pos}) => {
+    let styles="col-sm-4 p-1 "
+    if (pos===7){
+        styles+= 'rounded-bottom-left'
+    }
+    if (pos===9){
+        styles+= 'rounded-bottom-right'
+    }
     return (
-        <img className="col-sm-4 p-1" src={name} alt="Friend"/>
+        <img className={styles} src={name} alt="Friend"/>
     );
 };
 
