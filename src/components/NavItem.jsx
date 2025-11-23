@@ -1,9 +1,11 @@
 import React from 'react';
 
 
-const NavItem = ({itemTitle}) => {
+const NavItem = ({changePage,itemTitle}) => {
     return (
-        <li className="nav-item btn btn-danger mx-1 border-warning">
+        <li
+            onClick={() => {changePage(itemTitle)}}
+            className="nav-item btn btn-danger mx-1 border-warning">
             {itemTitle}
         </li>
     );
